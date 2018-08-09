@@ -19,13 +19,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-		<link rel="stylesheet" href="css/colorpicker.css" type="text/css" />
-    <link rel="stylesheet" media="screen" type="text/css" href="css/layout.css" />
-   
-	<script type="text/javascript" src="js/colorpicker.js"></script>
-    <script type="text/javascript" src="js/eye.js"></script>
-    <script type="text/javascript" src="js/utils.js"></script>
-    <script type="text/javascript" src="js/layout.js?ver=1.0.2"></script>
+
+<script type="text/javascript" language="javascript" src="js/colorPicker.js"></script>
+<link rel="stylesheet" href="css/colorPicker.css" type="text/css"></link>
 
 <script type="text/javascript">
 
@@ -49,18 +45,20 @@ function CambioColores()
   </head>
   
   <body>
-<input type="text" id="colores">
 
- <button type="button"  onclick="CambioColores()">Color</button>
+<div >
+<h2>Configuracion del Sistema</h2>
+<br>
+<table>
+<tr><td><label>Menu Principal</label></td><td></td></tr>
+<tr><td><img src="images/paleta.jpg" onclick="startColorPicker(this)" onkeyup="maskedHex(this)"> </td><td></td></tr>
+
+</table>
+
+ <button type="button"  onclick="CambioColores()">Cambiar</button>
  
-   <div class="wrapper">
-  <div id="customWidget">
- 
-					<div id="colorSelector2"><div style="background-color: #00ff00"></div></div>
-	                <div id="colorpickerHolder2">
-	                </div>
-  
-  </div>
-  </div>
+<input type="text" id="colores" >
+
+</div>
   </body>
 </html>
