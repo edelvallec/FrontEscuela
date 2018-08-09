@@ -28,37 +28,48 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 function CambioColores()
 {
 
-//alert("holaaaaaaaaa");
-
-// alert("El color es:"+ $("#colores").val());
- 
  $('#menu').css({
 	 background:$("#colores").val()
 	 });
 
 }
 
+function CambioFondoPagina()
+{
+ $('body').css({
+	 background:$("#fondocolores").val()
+	 });
+
+}
 
 </script>
 
 
   </head>
   
-  <body>
+  <body class=''>
 
-<div >
+<form action="">
 <h2>Configuracion del Sistema</h2>
 <br>
-<table>
+<table align="left">
 <tr><td><label>Menu Principal</label></td><td></td></tr>
-<tr><td><img src="images/paleta.jpg" onclick="startColorPicker(this)" onkeyup="maskedHex(this)"> </td><td></td></tr>
-
+<!-- <tr><td><input type="color" id="colores" onclick="startColorPicker(this)" onkeyup="maskedHex(this)" size="5"></td><td><button type="button"  onclick="CambioColores()">Cambiar</button</td></tr> -->
+<tr><td>Selecciona el Color: &ensp;&ensp; </td><td><input type="color" id="colores" >&ensp;&ensp;</td><td><button type="button"  onclick="CambioColores()">Cambiar</button></td></tr>
 </table>
 
- <button type="button"  onclick="CambioColores()">Cambiar</button>
- 
-<input type="text" id="colores" >
+<br>
+<br>
+<br>
+<br>
+<table align="left">
+<tr><td><label>Fondo de Pagina</label></td><td></td></tr>
+<tr><td>Selecciona el Color: &ensp;&ensp; </td><td><input type="color" id="fondocolores" >&ensp;&ensp;</td><td><button type="button"  onclick="CambioFondoPagina()">Cambiar</button></td></tr>
 
-</div>
+</table>
+ 
+ </form>
+
+
   </body>
 </html>
