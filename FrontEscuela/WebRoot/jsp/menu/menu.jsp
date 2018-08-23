@@ -22,12 +22,11 @@ System.out.println("Tipo desde menu: "+m);
 
 
 
-
 <style>
 { margin:0;
     padding:0;
 }
-body { background:rgb(74,81,85); }
+body { background:#ECF0F1; }
 div#menu { margin:5px auto; }
 
 
@@ -174,10 +173,14 @@ div#menu li.back .left {
     margin-right: 8px;
 }
 
-
-
-
-
+.botonimagen{
+  background-image:url(images/salir.png);
+  background-repeat:no-repeat;
+  height:85px;
+  width:80px;
+  background-position:center;
+  
+}
 
 </style>
 
@@ -191,17 +194,31 @@ div#menu li.back .left {
   
   <body>
   
-<table width="100%" >
+
+<table width="100%" >  
+  
+
+
 <tr>
-<td>
-<div id="menu" >
-     <ul class="menu">
-     </ul>
-</div></td> 
-<td  align="right" ><div style="background:url(images/main-bg.png) repeat-x;height:45px;line-height:46px;font: normal Trebuchet MS;">Bienvenido:&nbsp; <%= session.getAttribute( "user" ) %>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+<td width="15%"> 
+    <img  src="images/avatar-01.jpg" width="110px" height="110px">
 </td>
-</tr> 
+<td width="85%">   
+<div id="menu" >
+
+
+
+<ul class="menu"></ul>
+     <ul  style="line-height: 43px;float:right;">
+     <li>&nbsp;&nbsp;Bienvenido:&nbsp; <%= session.getAttribute( "user" ) %>&nbsp;
+     &nbsp;</li><a href="#" onclick="window.location.reload(true);"><span class="dashicons dashicons-admin-users">Salir</span></a>
+     </ul>
+</div>
+
+</td>
+</tr>
 </table>
+
 <input type="hidden" id="idtipo" value="<%=m%>">
 
 </body>  

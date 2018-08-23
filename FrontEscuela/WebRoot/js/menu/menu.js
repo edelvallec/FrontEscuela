@@ -1,5 +1,10 @@
+var gOptions = {
+  ip:'http://localhost:8080',		
+  getMenu: '/BackEnd_CoreEsc/resources/menu/getMenu/'
+}
+
 $(function() {
-  	$.get("http://localhost:8080/BackEnd_CoreEsc/resources/menu/getMenu/"+$("#idtipo").val(),
+  	$.get(gOptions.ip+gOptions.getMenu+$("#idtipo").val(),
 			  function(data)
 			  {
 		            crearMenu(JSON.stringify(data));
@@ -21,7 +26,7 @@ var k =0;
 //pintamos los menus y aca menu le damos de class el menu[i].cMenu,
 // para utilizarlo en el momento de agregar el submenu
   var className = menu[i].cMenu.replace(" ","");
-    $(".menu").append("<li   class="+className+"><a href='#' class='parent'><span>"+menu[i].cMenu+"</span></a></li>")
+    $(".menu").append("<li   class="+className+"><a href='#' class='parent'><span "+menu[i].caccion+">"+menu[i].cMenu+"</span></a></li>")
     
     var jsonSub =JSON.parse(JSON.stringify(menu[i].cSubMenu));
     if(jsonSub.length!=0){

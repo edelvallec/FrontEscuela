@@ -10,7 +10,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <base href="<%=basePath%>">
     
     <title>My JSP 'subPagina.jsp' starting page</title>
-    
+    <link rel="stylesheet" href="css/utilerias.css" type="text/css"></link>
       </head>
   
   <body>

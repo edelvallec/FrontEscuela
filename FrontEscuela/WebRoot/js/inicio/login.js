@@ -1,6 +1,11 @@
+var gOptions = {
+  ip:'http://localhost:8080',		
+  loginUser: '/BackEnd_CoreEsc/resources/user/valuser/'
+}
+
 function valLogin(){
 	
-	$.get("http://localhost:8080/BackEnd_CoreEsc/resources/user/valuser/"+$("#inputuser").val()+"/"+$("#inputPassword").val(),
+	$.get(gOptions.ip+gOptions.loginUser+$("#inputuser").val()+"/"+$("#inputPassword").val(),
 			  function(data){
 	
 			    if(data.success.user=='true'){
